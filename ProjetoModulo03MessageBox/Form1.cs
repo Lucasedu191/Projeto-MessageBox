@@ -65,5 +65,17 @@ namespace ProjetoModulo03MessageBox
             }
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string mensagem = "Esta é uma caixa de texto simples!";
+            string titulo = this.Text;
+            MessageBoxButtons botoes = MessageBoxButtons.YesNo;
+            MessageBoxIcon icone = MessageBoxIcon.Warning;
+            MessageBox.Show(mensagem, titulo, botoes, icone);
+
+
+
+        }
     }
 }
