@@ -35,9 +35,35 @@ namespace ProjetoModulo03MessageBox
         {
             string mensagem = "Esta é uma caixa de texto simples!";
             string titulo = "Título da mensagem";
-            MessageBoxButtons botoes = MessageBoxButtons.OKCancel;
-            //digitar todas as opções de botões nos comentarios!não esquecer
+            MessageBoxButtons botoes = MessageBoxButtons.OK;
+            /*digitar todas as opções de botões nos comentarios!não esquecer
+             okcancel
+             retrycancel
+             yesno
+             yesnocancel
+
+
+             */
             MessageBox.Show(mensagem, titulo, botoes);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string mensagem = "Esta é uma caixa de texto simples!";
+            string titulo = this.Text;
+            MessageBoxButtons botoes = MessageBoxButtons.YesNo;
+            DialogResult resultado;
+            resultado = MessageBox.Show(mensagem, titulo, botoes);
+
+            if(resultado == DialogResult.Yes)
+            {
+                MessageBox.Show("sim");
+            }
+            else if (resultado == DialogResult.No)
+            {
+                MessageBox.Show("Não");
+            }
+
         }
     }
 }
